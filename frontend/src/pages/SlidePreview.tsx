@@ -51,6 +51,7 @@ export const SlidePreview: React.FC = () => {
     isGlobalLoading,
     taskProgress,
     pageGeneratingTasks,
+    warningMessage,
   } = useProjectStore();
   
   const { addTask, pollTask: pollExportTask, tasks: exportTasks, restoreActiveTasks } = useExportTasksStore();
@@ -162,6 +163,13 @@ export const SlidePreview: React.FC = () => {
     };
     loadTemplates();
   }, [projectId, currentProject, syncProject]);
+
+  // 监听警告消息
+  useEffect(() => {
+    if (warningMessage) {
+      show({ message: warningMessage, type: 'warning', duration: 6000 });
+    }
+  }, [warningMessage, show]);
 
   // 当项目加载后，初始化额外要求和风格描述
   // 只在项目首次加载或项目ID变化时初始化，避免覆盖用户正在输入的内容

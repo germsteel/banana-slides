@@ -14,6 +14,8 @@ interface ProjectState {
   pageGeneratingTasks: Record<string, string>;
   // 每个页面的描述生成状态 (pageId -> boolean)
   pageDescriptionGeneratingTasks: Record<string, boolean>;
+  // 警告消息
+  warningMessage: string | null;
 
   // Actions
   setCurrentProject: (project: Project | null) => void;
@@ -105,6 +107,7 @@ const debouncedUpdatePage = debounce(
   error: null,
   pageGeneratingTasks: {},
   pageDescriptionGeneratingTasks: {},
+  warningMessage: null,
 
   // Setters
   setCurrentProject: (project) => set({ currentProject: project }),
@@ -758,7 +761,11 @@ const debouncedUpdatePage = debounce(
               delete newTasks[id];
             }
           });
-          set({ pageGeneratingTasks: newTasks });
+          
+          // 提取警告消息（如果有）
+          const warningMessage = task.progress?.warning_message || null;
+          
+          set({ pageGeneratingTasks: newTasks, warningMessage });
 
           // 刷新项目数据，并验证图片路径已更新
           // 使用重试机制确保数据同步完成
