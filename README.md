@@ -8,13 +8,14 @@
 
 <p>
 
-[![GitHub Stars](https://img.shields.io/github/stars/Anionex/banana-slides?style=square)](https://github.com/Anionex/banana-slides/stargazers)
-[![GitHub Forks](https://img.shields.io/github/forks/Anionex/banana-slides?style=square)](https://github.com/Anionex/banana-slides/network)
-[![GitHub Watchers](https://img.shields.io/github/watchers/Anionex/banana-slides?style=square)](https://github.com/Anionex/banana-slides/watchers)
+[![GitHub Stars](https://img.shields.io/github/stars/Anionex/banana-slides?style=square&color=FFD700)](https://github.com/Anionex/banana-slides/stargazers)
+[![GitHub Forks](https://img.shields.io/github/forks/Anionex/banana-slides?style=square&color=FFD700)](https://github.com/Anionex/banana-slides/network)
+[![GitHub Watchers](https://img.shields.io/github/watchers/Anionex/banana-slides?style=square&color=FFD700)](https://github.com/Anionex/banana-slides/watchers)
 
-[![Version](https://img.shields.io/badge/version-v0.4.0-4CAF50.svg)](https://github.com/Anionex/banana-slides)
-![Docker](https://img.shields.io/badge/Docker-Build-2496ED?logo=docker&logoColor=white)
-[![License](https://img.shields.io/github/license/Anionex/banana-slides)](https://github.com/Anionex/banana-slides/blob/main/LICENSE)
+
+[![Version](https://img.shields.io/badge/version-v0.4.0-44cc11)](https://github.com/Anionex/banana-slides)
+![Docker](https://img.shields.io/badge/Docker-Build-4A90D9?logo=docker&logoColor=white)
+[![License](https://img.shields.io/github/license/Anionex/banana-slides?color=0055aa)](https://github.com/Anionex/banana-slides/blob/main/LICENSE)
 
 
 
